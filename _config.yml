@@ -1,0 +1,138 @@
+# The Site Configuration
+
+# Import the theme
+theme: jekyll-theme-chirpy
+
+baseurl: ''
+
+lang: en-US
+
+timezone: Asia/Jakarta
+
+title: ITSEC                          
+
+tagline: if the first try fails! let's call it version 0.1   # it will display as the sub-title
+
+description: >-                        
+  I've tried my best, it's up to you whether you can appreciate it or not.
+  
+url: 'https://itsec.ac.id'
+
+instagram:
+   username: enoleriand             
+twitter:
+  username: IDsec_            
+  
+linkedin:
+  username: enoleriiand
+
+social:
+  
+  name: IDsec_
+  email: eno@itsec.ac.id             
+  links:
+    # The first element serves as the copyright owner's link
+    - https://twitter.com/IDsec_      # change to your twitter homepage
+    - https://www.instagram.com/enoleriand
+    # Uncomment below to add more social links
+    # - https://www.facebook.com/
+    - https://www.linkedin.com/in/enoleriiand
+
+google_site_verification: google-site-verification=0arM_FHQlJGUUtsCjPBfjGLMcjDqyx_HAHHi4oWogm0 # change to your verification string
+ahrefs-site-verification: ahrefs-site-verification_402200d3eba48e24b101c325b7c259ef2b54263ecd78da02f5216a70e27f87a2
+
+# --------------------------
+
+google_analytics:
+  id: 'G-5VMQFNZVQ6'              
+  pv:
+    proxy_endpoint:   
+    cache_path:       
+
+theme_mode: dark  # [light|dark]
+
+img_cdn: ''
+
+avatar: /assets/img/favicons/avatar.png
+
+toc: true
+
+valine:
+  comments: true            
+  leancloud_appid: FWkEX16hdTMRmYzFQeIqS4GH-MdYXbMMI         
+  leancloud_appkey: ihjgIDYfMOWOfiX7hkrQrGXR       
+  placeholder: Your Comments.   
+  avatar: wavatar  
+
+paginate: 10
+
+kramdown:
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:  
+    css_class: highlight
+    # default_lang: console
+    span:
+      line_numbers: false
+    block:
+      line_numbers: true
+      start_line: 1
+
+collections:
+  tabs:
+    output: true
+    sort_by: order
+
+
+defaults:
+  -
+    scope:
+      path: ''          
+      type: posts
+    values:
+      layout: post
+      comments: true    
+      toc: true         
+      autoads: true     
+      permalink: /:title/
+  -
+    scope:
+      path: _drafts
+    values:
+      comments: false
+  -
+    scope:
+      path: ''
+      type: tabs             
+    values:
+      layout: page
+      permalink: /:title/
+      dynamic_title: true    
+
+sass:
+  style: compressed
+
+compress_html:
+  clippings: all
+  comments: all
+  endings: all
+  profile: false
+  blanklines: false
+  ignore:
+    envs: [development]
+
+exclude:
+  - '*.gem'
+  - '*.gemspec'
+  - tools
+  - gulpfile.js
+  - node_modules
+  - '*.json'
+
+jekyll-archives:
+  enabled: [categories, tags]
+  layouts:
+    category: category
+    tag: tag
+  permalinks:
+    tag: /tags/:name/
+    category: /categories/:name/
